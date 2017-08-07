@@ -3,7 +3,7 @@
     <aside class="aside">
       <div class="logo">Lakes</div>
       <ul class="nav text-c">
-        <li v-for="nav of navArr">
+        <li v-for="(nav, index) of navArr" :key="index">
           <router-link :to="{ name: nav.name }">
             {{ nav.text }}
           </router-link>
